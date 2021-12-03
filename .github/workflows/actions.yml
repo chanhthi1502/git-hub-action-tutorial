@@ -1,11 +1,11 @@
 name: Actions Workflow
 
 on :
-  push:
-    branches:
-      - master
-      - 'feat/*' # match only feat/featA, feat/featB
-      - 'feat/**' # match feat/featA, feat/featA/featB
+  #push:
+    #branches:
+      #- master
+      #- 'feat/*' # match only feat/featA, feat/featB
+      #- 'feat/**' # match feat/featA, feat/featA/featB
   #repository_dispatch:
     #types: [build]
   #schedule:
