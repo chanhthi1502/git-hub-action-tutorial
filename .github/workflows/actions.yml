@@ -1,13 +1,18 @@
 name: Actions Workflow
 
 on :
-  repository_dispatch:
-    types: [build]
+  push:
+    branches:
+      - master
+      - 'feat/*' # match only feat/featA, feat/featB
+      - 'feat/**' # match feat/featA, feat/featA/featB
+  #repository_dispatch:
+    #types: [build]
   #schedule:
     #- cron: "0/5 * * * *"
     #- cron: "0/6 * * * *"
-  pull_request:
-    types: [closed, assigned, opened, reopened]
+  #pull_request:
+    #types: [closed, assigned, opened, reopened]
 
 jobs:
   run-github-actions:
